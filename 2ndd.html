@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Page</title>
+    <style>
+        body {
+            /* Background setup */
+            background-image: url('painting-mountain-lake-with-mountain-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            /* Text styling */
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container to make content readable over the wallpaper */
+        .glass-container {
+            background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent box */
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .profile-img {
+            border-radius: 50%; /* Makes your image circular */
+            border: 2px solid white;
+        }
+
+        table {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="glass-container">
+        <div style="text-align: center;">
+            <h1>Welcome to my web page!</h1>
+        </div>
+
+        <div style="text-align: right;">
+            <img src="ironman.png" alt="Profile Picture" width="100px" height="100px" class="profile-img">
+        </div>
+
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="https://www.google.com">Click here to visit Google</a></li>
+            <li><a href="https://www.facebook.com">Click here to visit Facebook</a></li>
+        </ul>
+
+        <h3>Data Structure Table</h3>
+        
+        <table border="1">
+            <tr>
+                <td>Parent Cell 1 (Main Category)</td>
+                <td>
+                    <table border="1" style="width: 100%;">
+                        <tr>
+                            <td>Nested Cell A (Sub-topic)</td>
+                        </tr>
+                        <tr>
+                            <td>Nested Cell B (Sub-topic)</td>
+                        </tr>
+                    </table>
+                    </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

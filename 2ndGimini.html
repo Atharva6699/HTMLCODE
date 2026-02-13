@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .container {
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+
+  /* Style for the inner (nested) table */
+  .inner-table {
+    background-color: #f9f9f9;
+    margin: 0;
+  }
+
+  .inner-table td {
+    border: 1px dashed #bbb;
+  }
+
+  .link-section {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Project Showcase</h1>
+  
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600" alt="Coding Image">
+
+  <h3>Syllabus Overview</h3>
+  <table>
+    <tr>
+      <th>Subject</th>
+      <th>Topic Details (Nested Table)</th>
+    </tr>
+    <tr>
+      <td>Web Development</td>
+      <td>
+        <table class="inner-table">
+          <tr><td>HTML5</td></tr>
+          <tr><td>CSS3</td></tr>
+          <tr><td>JavaScript</td></tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+      <td>Data Structures</td>
+      <td>C++ Implementation</td>
+    </tr>
+  </table>
+
+  <div class="link-section">
+    <h3>Resources</h3>
+    <a href="https://www.google.com" target="_blank">Search on Google</a><br>
+    <a href="https://www.w3schools.com" target="_blank">Learn Web Development</a>
+  </div>
+</div>
+
+</body>
+</html>
