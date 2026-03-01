@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SITS Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            width: 75%;
+            max-width: 850px;
+            margin: 0 auto;
+            border: 2px solid #333;
+            padding: 30px;
+            background: white;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .row {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .row div {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        input[type="url"], 
+        select, 
+        textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .profile {
+            text-align: right;
+            margin-bottom: -40px;
+        }
+
+        .profile img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 2px solid #333;
+            object-fit: cover;
+        }
+
+        h3 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            color: #222;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 40px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<table class="header-table" border="1">
+    <tr>
+        <td align="left" width="150">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Savitribai_Phule_Pune_University_Logo.png" width="120">
+        </td>
+        <td align="center">
+            <h1 style="margin:0; font-size: 22px;">Sinhgad Institute of Technology and Science</h1>
+            <p style="margin:5px 0 0 0;">Student Information System</p>
+        </td>
+        <td align="right" width="150">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Savitribai_Phule_Pune_University_Logo.png" width="120">
+        </td>
+    </tr>
+</table>
+
+<section class="form-container">
+
+    <div class="profile">
+        <img src="https://i.gadgets360cdn.com/large/pavel_durov_twitter_1574430579140.jpg" alt="Profile">
+    </div>
+
+    <h2 style="text-align:center; margin-bottom: 30px;">Registration Form</h2>
+
+    <form action="submit_form.php" method="post">
+
+        <div class="row">
+            <div>
+                <label><b>First Name:</b></label>
+                <input type="text" name="first_name" required>
+            </div>
+            <div>
+                <label><b>Last Name:</b></label>
+                <input type="text" name="last_name" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label><b>Branch:</b></label>
+                <select name="branch" required>
+                    <option value="">Select Branch</option>
+                    <option>CE</option><option>IT</option><option>E&TC</option>
+                    <option>MECH</option><option>CIVIL</option>
+                </select>
+            </div>
+            <div>
+                <label><b>Division:</b></label>
+                <select name="division" required>
+                    <option value="">Select Division</option>
+                    <option>A</option><option>B</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>Contact & Social Media</h3>
+        <div class="row">
+            <div>
+                <label><b>Mobile Number:</b></label>
+                <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10 Digit Number" required>
+            </div>
+            <div>
+                <label><b>Email ID:</b></label>
+                <input type="email" name="email" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label><b>GitHub Link:</b></label>
+                <input type="url" name="github" placeholder="https://github.com/yourprofile">
+            </div>
+            <div>
+                <label><b>Instagram:</b></label>
+                <input type="url" name="instagram" placeholder="https://instagram.com/yourhandle">
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="flex: 2;"> 
+                <label><b>Address:</b></label>
+                <textarea name="address" rows="2" required></textarea>
+            </div>
+            <div style="flex: 1;">
+                <label><b>City:</b></label>
+                <input type="text" name="city" required>
+            </div>
+            <div style="flex: 1;">
+                <label><b>PIN:</b></label>
+                <input type="text" name="pincode" pattern="[0-9]{6}" required>
+            </div>
+        </div>
+
+        <h3>Skills & Hobbies</h3>
+        <div class="row">
+            <div>
+                <label><b>Technical Skills:</b></label>
+                <input type="text" name="skills" placeholder="e.g. C++, DSA, Web Dev">
+            </div>
+            <div>
+                <label><b>Hobbies:</b></label>
+                <input type="text" name="hobbies" placeholder="e.g. Coding, Gym, Anime">
+            </div>
+        </div>
+
+        <h3>Describe Yourself</h3>
+        <div class="row">
+            <div style="width:100%;">
+                <label><b>About You:</b></label>
+                <textarea name="about" rows="3" placeholder="Tell us more about your interests..." required></textarea>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <input type="submit" value="Register Now" class="submit-btn">
+        </div>
+
+    </form>
+</section>
+
+</body>
+</html>

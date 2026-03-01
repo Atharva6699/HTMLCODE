@@ -1,0 +1,25 @@
+body {
+            background-color: #f5deb3; /* Wheat */
+            font-family: 'Georgia', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            color: #333;
+        }
+        .box-container {
+            background-color: #fff9eb; /* Slightly lighter than wheat */
+            padding: 30px;
+            border: 1px solid #ffffff;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        
+.gender-options {
+    display: flex;
+    gap: 20px;      /* Space between options */
+    align-items: center;
+}
